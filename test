@@ -15,7 +15,7 @@ SELECT * FROM Person INNER JOIN Address ON Person.PersonId = Address.PersonId
 SELECT MAX (Age) FROM Student WHERE Age NOT IN (SELECT MAX (Age) FROM Student)
 
 15.  SQL Quary to get the nth highest salary from Employee table
-Select Salary from Employee order by Salary DESC limit n-1,1
+Select Salary FROM Employee ORDER BY Salary DESC LIMIT n-1,1
 
 16.  Write a SQL query to find the median salary of each company.?
 SELECT AVG(salary) as median salary FROM company
