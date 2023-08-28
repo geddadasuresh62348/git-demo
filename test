@@ -1,14 +1,22 @@
 11. Create Student Table with ID as Primary Key and NOT NULL , Name as 20 Characters ,Age as Int value both are NOT NULL and Address have  25 charter And Insert Any 5 Records?  
-ANS:- 
+ANS :- 
 CREATE TABLE Student(ID int PRIMARY KEY NOT NULL ,Name varchar(20),Age int NOT NULL ,Address varchar(25))  
 INSERT into Student values(1,suresh,24,Hyderabad),(2,prakash,23,Hyderabad),(3,venu,27,Hyderabad),(4,jogesh,20,Hyderabad),(5,kethan,23,Hyderabad)
 
 12.  Write an SQL query to find the youngest student in the "student" table ?
+ANS :- 
 SELECT * FROM Student ORDER BY Age LIMIT 1
 
 13.  Write an SQL query to retrieve the names and addresses of all persons from the "Person" table along with their corresponding addresses from the "Address" table.
+ANS :-
 SELECT * FROM Person INNER JOIN Address ON Person.PersonId = Address.PersonId
 
 14.  Write an SQL query to fetch the second highest number from the "student" table.?
+SELECT MAX (Age) FROM Student WHERE Age NOT IN (SELECT MAX (Age) FROM Student)
+
+
+16.  Write a SQL query to find the median salary of each company.?
+SELECT AVG(salary) as median salary FROM company
+
 
 
